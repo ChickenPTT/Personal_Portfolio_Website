@@ -437,6 +437,56 @@ img {
     transform: translateX(2px) translateY(-2px);
 }
 
+
+/* About me */
+.about-me-section {
+    border-top: 1px #484848 solid;
+    padding: 100px 107px 120px;
+}
+
+.about-me {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.about-me-content {
+    width: 50%;
+    float: right;
+}
+
+.about-me-label {
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    width: 30%;
+    color: var(--text-primary);
+}
+
+.btn-about-me .project-link {
+    margin-top: 40px;
+}
+
+.about-me-title {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.about-me-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.7;
+}
+
 /* =============================================
    Responsive Design
    ============================================= */
