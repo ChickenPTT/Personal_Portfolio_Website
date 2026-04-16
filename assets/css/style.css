@@ -1,7 +1,3 @@
-/* =============================================
-   CSS Reset & Base Styles
-   ============================================= */
-*,
 *::before,
 *::after {
     margin: 0;
@@ -20,8 +16,26 @@
     --accent-hover: #d4ff3a;
     --border-color: #2a2a2a;
     --gray-bg: #555555;
+    --header-bg: rgba(10, 10, 10, 0.85);
+    --header-border: rgba(255, 255, 255, 0.05);
     --font-primary: 'Inter', sans-serif;
     --font-heading: 'Outfit', sans-serif;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e8e8e8;
+    --bg-card: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --text-muted: #888888;
+    --accent: #7ab800;
+    --accent-hover: #5a9400;
+    --border-color: #d4d4d4;
+    --gray-bg: #cccccc;
+    --header-bg: rgba(245, 245, 245, 0.9);
+    --header-border: rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -36,6 +50,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -52,19 +67,64 @@ img {
     display: block;
 }
 
-/* =============================================
-   Navigation
-   ============================================= */
+/* Navigation */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: rgba(10, 10, 10, 0.85);
+    background-color: var(--header-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--header-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 8px;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Show/hide icons based on theme */
+.theme-toggle .icon-sun {
+    display: none;
+}
+
+.theme-toggle .icon-moon {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+    display: none;
 }
 
 .nav {
@@ -92,6 +152,7 @@ img {
 .nav-links {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .nav-link {
@@ -121,9 +182,7 @@ img {
     width: 100%;
 }
 
-/* =============================================
-   Hero Section
-   ============================================= */
+/*   Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -256,9 +315,7 @@ img {
     transform: scale(1.03);
 }
 
-/* =============================================
-   Section Divider
-   ============================================= */
+/* Section Divider */
 .section-divider {
     max-width: 1200px;
     margin: 0 auto;
@@ -268,9 +325,7 @@ img {
     margin-right: 40px;
 }
 
-/* =============================================
-   Featured Projects Section
-   ============================================= */
+/* Featured Projects Section */
 .projects {
     max-width: 1200px;
     margin: 0 auto;
@@ -302,7 +357,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: start;
+    align-items: center;
     padding: 40px 0;
 }
 
@@ -459,12 +514,13 @@ img {
 
 .about-me-label {
     font-family: var(--font-heading);
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(48px, 7vw, 90px);
     font-weight: 900;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     margin-bottom: 16px;
-    width: 30%;
+    width: 45%;
     color: var(--text-primary);
+    line-height: 1.05;
 }
 
 .btn-about-me .project-link {
@@ -487,9 +543,159 @@ img {
     line-height: 1.7;
 }
 
-/* =============================================
-   Responsive Design
-   ============================================= */
+/* Let's Connect Section */
+.connect-section {
+    border-top: 1px solid var(--border-color);
+    padding: 100px 40px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.connect-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.connect-title {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+    color: var(--text-primary);
+}
+
+.connect-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 4px;
+}
+
+.connect-email,
+.connect-resume-link {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.connect-email:hover,
+.connect-resume-link:hover {
+    color: var(--accent);
+}
+
+.connect-socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.connect-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.connect-social-icon:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* Contact Form */
+.connect-form-wrapper {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(197, 248, 42, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 36px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 100px;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.form-submit:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(197, 248, 42, 0.2);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 32px 40px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
     .nav {
         padding: 16px 24px;
@@ -548,6 +754,32 @@ img {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
+    .about-me-section {
+        padding: 60px 24px 80px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about-me-label {
+        width: 100%;
+    }
+
+    .about-me-content {
+        width: 100%;
+    }
+
+    .connect-section {
+        padding: 60px 24px 60px;
+    }
+
+    .connect-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -575,5 +807,13 @@ img {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
+    }
+
+    .about-me-label {
+        font-size: 40px;
+    }
+
+    .connect-title {
+        font-size: 32px;
     }
 }
