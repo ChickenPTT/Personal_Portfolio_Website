@@ -2,11 +2,8 @@
 (function () {
     'use strict';
 
-    // Auto-detect: localhost for dev, Render URL for production
-    // ⚠️ Sau khi deploy Render, thay YOUR_APP_NAME bằng tên app thật
-    const API_URL = window.location.hostname === 'localhost'
-        ? 'http://localhost:8081/api/contact'
-        : 'https://personal-portfolio-website-tuc5.onrender.com/api/contact';
+    // Same server serves both frontend and API
+    const API_URL = '/api/contact';
     const form = document.getElementById('connect-form');
     const submitBtn = document.getElementById('form-submit');
 
