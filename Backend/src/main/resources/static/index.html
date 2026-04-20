@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Phan Tien Thinh - Back-end Intern Portfolio. Building accessible and user friendly websites.">
+    <title>PhanTienThinh | Back-end Intern</title>
+    <link rel="icon" type="image/png" href="/assets/image/favicon.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav-logo" id="nav-logo">Phan Tien Thinh</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#work" class="nav-link">Project</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">HI, I AM<br>Phan Tien Thinh.</h1>
+                <p class="hero-description">A third-year university student seeking a backend internship, specializing
+                    in Java and passionate about building scalable and reliable systems.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-contact" id="btn-contact">
+                        <span>CONTACT ME</span>
+                        <span class="btn-dot"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/phantienthinh/" class="social-icon" id="social-linkedin"
+                        aria-label="LinkedIn" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ChickenPTT" target="_blank" class="social-icon" id="social-github"
+                        aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="assets/image/profile.jpg" alt="Robert Garcia - Front-end Developer" id="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end header -->
+
+    <!-- body -->
+    <div class="section-divider"></div>
+    <!-- Featured Projects Section -->
+    <section class="projects" id="work">
+        <div class="projects-header">
+            <h2 class="projects-title">FEATURED PROJECTS</h2>
+            <p class="projects-description">Here are some of the selected projects that showcase my passion for
+                back-end development.</p>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card" id="project">
+            <div class="project-image">
+                <div class="project-tag">Personal Project</div>
+                <img src="assets/image/p3.png" alt="Backend Web Application with Jakarta EE (Servlet, JSP, JDBC)">
+            </div>
+            <div class="project-info">
+                <h3 class="project-name">Full-Stack Developer Portfolio Website</h3>
+                <p class="project-desc">A modern, responsive portfolio website built with Java, HTML, CSS,
+                    and JavaScript to showcase my skills, projects, and experience as a full-stack developer.</p>
+
+                <div class="project-meta-label">PROJECT INFO</div>
+
+                <div class="project-meta">
+                    <div class="project-meta-row">
+                        <span class="meta-key">Year</span>
+                        <span class="meta-value">5/4/2026 - 20/4/2026</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="meta-key">Role</span>
+                        <span class="meta-value">FullStack Developer</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/ChickenPTT/Personal_Portfolio_Website" class="project-link"
+                        id="project-1-github">
+                        SEE ON GITHUB
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 1 -->
+        <div class="project-card" id="project-1">
+            <div class="project-image">
+                <div class="project-tag">Personal Project</div>
+                <img src="assets/image/P1.png" alt="Backend Web Application with Jakarta EE (Servlet, JSP, JDBC)">
+            </div>
+            <div class="project-info">
+                <h3 class="project-name">Backend Web Application with Java EE (Servlet, JSP, JDBC)</h3>
+                <p class="project-desc">web-based user management system built using Java Servlets and JSP following the
+                    MVC architecture. It supports CRUD operations and connects to MySQL via JDBC. The project focuses on
+                    server-side logic handling, DAO design, and a clear, scalable architecture.</p>
+
+                <div class="project-meta-label">PROJECT INFO</div>
+
+                <div class="project-meta">
+                    <div class="project-meta-row">
+                        <span class="meta-key">Year</span>
+                        <span class="meta-value">6/2025 - 3/2026</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="meta-key">Role</span>
+                        <span class="meta-value">Back-end Developer</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <!-- <a href="#" class="project-link" id="project-1-demo">
+                        LIVE DEMO
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a> -->
+                    <a href="https://github.com/ChickenPTT/Backend-Web-Application-with-Jakarta-EE-Servlet-JSP-JDBC-/tree/laptrinhJavaWeb"
+                        class="project-link" id="project-1-github">
+                        SEE ON GITHUB
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card" id="project-2">
+            <div class="project-image">
+                <div class="project-tag">Team Project</div>
+                <img src="assets/image/p2.png" alt="Backend Web Application with Jakarta EE (Servlet, JSP, JDBC)">
+            </div>
+            <div class="project-info">
+                <h3 class="project-name">Redesign Website Toyota Viet Nam</h3>
+                <p class="project-desc">DuAnCk_TKGD Project (Final Project – User Interface Design)
+                    This project is a static website consisting of 12 main pages. It was developed as a team effort,
+                    focusing on building the user interface based on redesigned layouts created in Figma.</p>
+
+                <div class="project-meta-label">PROJECT INFO</div>
+
+                <div class="project-meta">
+                    <div class="project-meta-row">
+                        <span class="meta-key">Year</span>
+                        <span class="meta-value">7/7/2025- 24/7/2025</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="meta-key">Role</span>
+                        <span class="meta-value">Front-end Developer</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/ChickenPTT/DuAnCk_TKGD" class="project-link" id="project-2-github">
+                        SEE ON GITHUB
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about me -->
+    <section class="about-me-section" id="about">
+        <div class="about-me">
+            <h2 class="about-me-label">ABOUT ME</h2>
+            <div class="about-me-content">
+                <p class="about-me-title">Third-year Software Engineering student seeking a Backend Java internship
+                    opportunity</p>
+                <p class="about-me-description">I am a Third-year Software Engineering student in Viet Nam looking for
+                    exciting opportunities. Likes to focus on accessibility when developing. Passionate and curious
+                    about solving problems. Currently, I'm exploring more about Spring Boost, Core AWS Services. While I
+                    am not programming, I enjoy playing swimming, reading comics . Learning more to improve skill.</p>
+                <div class="btn-about-me">
+                    <a href="./DetailAboutMe.html" class="project-link" id="btn-more-about">
+                        MORE ABOUT ME
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Connect Section -->
+    <section class="connect-section" id="contact">
+        <div class="connect-container">
+            <div class="connect-info">
+                <h2 class="connect-title">LET'S CONNECT</h2>
+                <p class="connect-text">Say hello at <a href="mailto:phantienthinh.dev@gmail.com" class="connect-email"
+                        id="connect-email">phantienthinh0909@gmail.com</a></p>
+                <p class="connect-text">For more info, here's my <a href="#" class="connect-resume-link"
+                        id="connect-resume">resume</a></p>
+                <div class="connect-socials">
+                    <a href="https://www.linkedin.com/in/phantienthinh/" class="connect-social-icon"
+                        id="connect-linkedin" aria-label="LinkedIn" target="_blank">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ChickenPTT" class="connect-social-icon" id="connect-github"
+                        aria-label="GitHub" target="_blank">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/tomriot700/" class="connect-social-icon" id="connect-instagram"
+                        aria-label="Instagram" target="_blank">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="connect-form-wrapper">
+                <form class="connect-form" id="connect-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Name</label>
+                        <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email</label>
+                        <input type="email" id="contact-email" name="email" class="form-input" placeholder="Your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject" class="form-label">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" class="form-input"
+                            placeholder="Project Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Message</label>
+                        <textarea id="contact-message" name="message" class="form-input form-textarea"
+                            placeholder="Hello, I'd like to..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit" id="form-submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p class="footer-text">&copy; 2026 Phan Tien Thinh</p>
+    </footer>
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/contact.js"></script>
+</body>
+
+</html>
