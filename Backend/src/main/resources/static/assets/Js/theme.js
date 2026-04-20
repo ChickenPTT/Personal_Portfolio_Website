@@ -21,11 +21,11 @@
             localStorage.setItem(THEME_KEY, newTheme);
         });
 
-        const footerText = this.documentElement('.footer-text');
+        // Auto-update footer year
+        const footerText = document.querySelector('.footer-text');
         if (footerText) {
-            footerText.innerHTML = `&copy; ${new Date().getFullYear()} Phan Tien Thinh`
+            footerText.innerHTML = `&copy; ${new Date().getFullYear()} Phan Tien Thinh`;
         }
-
 
     });
 })();
