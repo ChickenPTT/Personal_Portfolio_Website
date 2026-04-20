@@ -6,7 +6,7 @@
     // ⚠️ Sau khi deploy Render, thay YOUR_APP_NAME bằng tên app thật
     const API_URL = window.location.hostname === 'localhost'
         ? 'http://localhost:8081/api/contact'
-        : 'https://YOUR_APP_NAME.onrender.com/api/contact';
+        : 'https://personal-portfolio-website-tuc5.onrender.com/api/contact';
     const form = document.getElementById('connect-form');
     const submitBtn = document.getElementById('form-submit');
 
