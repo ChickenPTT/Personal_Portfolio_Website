@@ -20,5 +20,12 @@
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem(THEME_KEY, newTheme);
         });
+
+        const footerText = this.documentElement('.footer-text');
+        if (footerText) {
+            footerText.innerHTML = `&copy; ${new Date().getFullYear()} Phan Tien Thinh`
+        }
+
+
     });
 })();
