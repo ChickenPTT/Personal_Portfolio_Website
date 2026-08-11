@@ -1,0 +1,197 @@
+/* About Me Section */
+.detail-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 40px 80px;
+}
+
+.detail-about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.detail-about-label {
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 7vw, 90px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    color: var(--text-primary);
+}
+
+.detail-about-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.detail-about-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 36px;
+    max-width: 520px;
+}
+
+.detail-about-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1.5px solid var(--accent);
+    border-radius: 100px;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Profile Photo Section */
+.detail-photo-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 100px;
+}
+
+.detail-photo-wrapper {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--gray-bg);
+}
+
+.detail-photo-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.detail-photo-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+/* My Capabilities Section */
+.capabilities-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 120px;
+}
+
+.capabilities-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.capabilities-title {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.capabilities-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+.capabilities-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(197, 248, 42, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .detail-about {
+        padding: 100px 24px 60px;
+    }
+
+    .detail-about-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .detail-photo-section {
+        padding: 20px 24px 60px;
+    }
+
+    .capabilities-section {
+        padding: 0 24px 80px;
+    }
+
+    .capabilities-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-about-label {
+        font-size: 40px;
+    }
+
+    .detail-about-actions {
+        flex-wrap: wrap;
+    }
+
+    .capabilities-title {
+        font-size: 32px;
+    }
+
+    .skill-tag {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
