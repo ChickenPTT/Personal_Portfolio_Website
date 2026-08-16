@@ -29,9 +29,12 @@ public class EmailService {
         helper.setTo(toEmail);
         helper.setFrom(fromEmail);
         helper.setReplyTo(request.getEmail());
+        helper.setSubject("New Contact Message: " + request.getSubject());
 
         String htmlContact = buildEmail(request);
+        helper.setText(htmlContact, true);
 
+        mailSender.send(mimeMessage);
     }
     public String buildEmail(ContactRequest request){
         return """

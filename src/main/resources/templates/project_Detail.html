@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phan Tien Thinh - Project Detail">
+    <title id="page-title">Project Detail | Phan Tien Thinh</title>
+    <link rel="icon" type="image/png" th:href="@{/User/image/favicon.png}" href="assets/image/favicon.png">
+    <link rel="stylesheet" th:href="@{/User/css/style.css}" href="assets/css/style.css">
+    <link rel="stylesheet" th:href="@{/User/css/project-detail.css}" href="assets/css/project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+</head>
+
+<body>
+<!-- header -->
+<header class="header" id="header">
+    <nav class="nav">
+        <a th:href="@{/}" href="index.html" class="nav-logo" id="nav-logo">Phan Tien Thinh</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a th:href="@{/projects}" href="projects.html" class="nav-link nav-link-active">Project</a></li>
+            <li><a th:href="@{/detail-profile}" href="detail-profile.html" class="nav-link">About</a></li>
+            <li><a th:href="@{/#contact}" href="index.html#contact" class="nav-link">Contact</a></li>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </ul>
+    </nav>
+</header>
+
+<!-- Nội dung được render bởi project-detail.js -->
+<main id="project-detail-content">
+    <!-- Loading / fallback state, sẽ bị JS ghi đè -->
+    <div class="detail-loading">
+        <p>Loading project...</p>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+    <p class="footer-text">&copy; 2026 Phan Tien Thinh</p>
+</footer>
+
+<script th:src="@{/User/Js/theme.js}" src="User/Js/theme.js"></script>
+<script th:src="@{/User/Js/projects-data.js(v=2)}" src="User/Js/projects-data.js?v=2"></script>
+<script th:src="@{/User/Js/project-detail.js(v=2)}" src="User/Js/project-detail.js?v=2"></script>
+</body>
+
+</html>

@@ -72,9 +72,7 @@
         }
     }
 
-    /**
-     * Show a notification message below the form
-     */
+
     function showNotification(message, type) {
         // Remove existing notification if any
         const existing = document.querySelector('.form-notification');
@@ -96,4 +94,5 @@
             setTimeout(() => notification.remove(), 500);
         }, 6000);
     }
+
 })();

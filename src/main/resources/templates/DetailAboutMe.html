@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" th:href="@{/User/image/favicon.png}">
     <link rel="stylesheet" th:href="@{/User/css/style.css}">
     <link rel="stylesheet" th:href="@{/User/css/about.css}">
-    <link rel="preconnect" th:href="https://fonts.googleapis.com">
-    <link rel="preconnect" th:href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -21,11 +21,11 @@
     <!-- Navigation -->
     <header class="header" id="header">
         <nav class="nav">
-            <a href="/" class="nav-logo" id="nav-logo">Phan Tien Thinh</a>
+            <a th:href="@{/}" href="/" class="nav-logo" id="nav-logo">Phan Tien Thinh</a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="/#work" class="nav-link">Project</a></li>
-                <li><a href="/#about" class="nav-link">About</a></li>
-                <li><a href="/#contact" class="nav-link">Contact</a></li>
+                <li><a th:href="@{/#work}" href="/#work" class="nav-link">Project</a></li>
+                <li><a th:href="@{/#about}" href="/#about" class="nav-link">About</a></li>
+                <li><a th:href="@{/#contact}" href="/#contact" class="nav-link">Contact</a></li>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -87,7 +87,7 @@
     <!-- Profile Image Section -->
     <section class="detail-photo-section" id="detail-photo">
         <div class="detail-photo-wrapper">
-            <img src="assets/image/delta.png" alt="Phan Tien Thinh - Profile Photo" id="detail-profile-image">
+            <img th:src="@{/User/image/delta.png}" src="assets/image/delta.png" alt="Phan Tien Thinh - Profile Photo" id="detail-profile-image">
         </div>
     </section>
 
