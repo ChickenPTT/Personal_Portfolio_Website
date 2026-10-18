@@ -168,9 +168,9 @@
     margin-top: 32px;
 }
 
-.detail-sidebar .project-meta-label:first-child {
-    margin-top: 0;
-}
+/*.detail-sidebar .project-meta-label:first-child {*/
+/*    margin-top: 0;*/
+/*}*/
 
 .detail-tech-tags {
     margin-bottom: 8px;

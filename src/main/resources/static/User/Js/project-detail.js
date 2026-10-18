@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Tech stack tags
     const techTagsHtml = project.techStack
         .map(t => `<span class='tech-tag'>${t}</span>`)
-        .join(',');
+        .join(', ');
 
     // Key features list
     const featuresHtml = project.features
@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     <ul class="detail-features-list">${featuresHtml}</ul>
                 </div>
 
-                <div class="detail-block">
+               <!-- <div class="detail-block">
                     <h2 class="detail-block-title">Challenges</h2>
                     <p class="detail-block-text">${project.challenges}</p>
-                </div>
+                </div> -->
 
                 ${galleryHtml ? `
                 <div class="detail-block">

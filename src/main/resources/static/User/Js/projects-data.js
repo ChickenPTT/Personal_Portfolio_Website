@@ -28,7 +28,7 @@ const projectsData = [
         role: "Back-end Developer",
         type: "Personal Project",
         year: "6/2025 - 3/2026",
-        featured: true,
+        featured: false,
         githubUrl: "https://github.com/ChickenPTT/Backend-Web-Application-with-Jakarta-EE-Servlet-JSP-JDBC-/tree/laptrinhJavaWeb",
         demoUrl: null,
         techStack: ["Java", "Servlet", "JSP", "JDBC", "MySQL"],
@@ -44,7 +44,7 @@ const projectsData = [
     {
         id: "toyota-redesign",
         name: "Leader - Redesign Website Toyota Viet Nam",
-        shortDesc: "A 12-page static website built as a team project, based on redesigned layouts created in Figma.",
+        shortDesc: "A static multi-page website for Toyota Vietnam, built by a team of four from a redesigned Figma layout.",
         thumbnail: "User/image/p2.png",
         role: "Front-end Developer",
         type: "Team Project",
@@ -52,36 +52,56 @@ const projectsData = [
         featured: false,
         githubUrl: "https://github.com/ChickenPTT/DuAnCk_TKGD",
         demoUrl: null,
-        techStack: ["HTML", "CSS", "JavaScript"],
-        overview: "Write a short paragraph about the problem this project solves and your goal for it.",
+        techStack: ["HTML", "CSS", "JavaScript", "Figma", "Git/GitHub"],
+        overview: "A final course project to redesign the Toyota Vietnam website. We started from a new interface designed in Figma and turned it into working static pages with HTML, CSS and JavaScript. As team leader, I set up the repository structure and a branch-per-member Git workflow, then merged everyone's pages into one connected website.",
         features: [
-            "12 fully responsive static pages",
-            "Led a team through Figma-to-code implementation",
-            "Consistent design system across pages"
+            "Homepage with image slider and slide transitions",
+            "Vehicle filter interface modeled on the Toyota website",
+            "Account pages: login, register and forgot password",
+            "History and search (find) pages",
+            "Newsroom and Parts & Accessories pages",
+            "All pages linked into one consistent site"
         ],
         challenges: "Describe a technical challenge you faced and how you solved it.",
-        gallery: ["User/image/p2.png"]
+        gallery: ["User/image/p2.png", "User/image/1.jpg" ],
     },
     {
         id: "website-Cake-Tea",
-        name: "Website Cake Tea",
-        shortDesc: "A modern, responsive portfolio website built with Java, HTML, CSS, and JavaScript to showcase my skills and projects.",
-        thumbnail: "User/image/p3.png",
-        role: "FullStack Developer",
-        type: "Personal Project",
-        year: "5/4/2026 - 20/4/2026",
+        name: "Website Tea and Cake",
+        shortDesc: "A full-stack e-commerce website for a cake and tea shop, built with Spring Boot and Thymeleaf, featuring product browsing, cart, ordering, user authentication and an admin dashboard.",
+        thumbnail: "User/image/Main_page.png",
+        role: "Back-end Developer",
+        type: "Team Project",
+        year: "20/6/2026 - 27/7/2026",
         featured: true,
-        githubUrl: "https://github.com/ChickenPTT/Personal_Portfolio_Website",
+        githubUrl: "https://github.com/ChickenPTT/Web_Java_Cake-Tea",
         demoUrl: null,
-        techStack: ["Java", "Spring Boot", "Thymeleaf", "HTML", "CSS", "JavaScript"],
-        overview: "Write a short paragraph about the problem this project solves and your goal for it.",
-        features: [
-            "Dark / Light theme toggle",
-            "Responsive layout across devices",
-            "Contact form with validation"
+        techStack: [
+            "Java 17", "Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf",
+            "MySQL", "Spring Mail", "Lombok", "Maven",
+            "HTML", "CSS", "JavaScript", "Bootstrap", "Font Awesome"
         ],
-        challenges: "Describe a technical challenge you faced and how you solved it.",
-        gallery: ["User/image/p3.png"]
+        overview: "A web application that lets customers browse a cake and tea menu, search for products, manage a shopping cart and place orders online, while giving shop staff an admin area to manage the store. I built it with a team of developers to practice a complete Spring Boot MVC workflow: server-side rendering with Thymeleaf, authentication with Spring Security, and data persistence with JPA and MySQL.",
+        features: [
+            "My Contributions: User Features",
+            "Browse the cake and tea menu with search and pagination",
+            "Product detail pages and a homepage header slider",
+            "Session-based shopping cart: add, update quantity, remove and clear items",
+            "Combo deals and promo codes, including a birthday discount, with live price calculation (subtotal, discount, delivery fee, total)",
+            "Checkout and order history page for each customer",
+            "Forgot-password flow with email reset link",
+            "Contact page and Vietnamese-language interface",
+            "Teammate’s Work: Admin Features",
+            "Separate admin login and protected admin area, routed through Thymeleaf",
+            "Admin dashboard UI built with Bootstrap and Font Awesome",
+            "User registration (with date of birth) and login popup powered by Spring Security",
+            "Order management: view and process customer orders",
+            "Combo management: create and maintain combo deals shown to customers",
+            "Promotion and campaign management behind the customer promo codes",
+            "Product and category management with image upload"
+        ],
+        challenges: "",
+        gallery: ["User/image/Main_page.png", "User/image/menupage.png", "User/image/AdminSign.png","User/image/adminpage.png"]
     }
 
 ];
