@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{fragments/layout :: assets}"></th:block>
+    <title>Gear | Phan Tien Thinh</title>
+    <meta name="description" content="The hardware and software Phan Tien Thinh uses every day.">
+</head>
+<body>
+<header th:replace="~{fragments/layout :: header('gear')}"></header>
+
+<main id="main">
+    <section class="page-head">
+        <div class="container">
+            <h1 class="page-title">The <span class="accent">gear</span> I use to build and ship.</h1>
+            <p class="page-lead">People sometimes ask what I work with. Here's my everyday setup, from hardware to the tools on my screen.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <!-- TODO: add exact laptop model, monitor, keyboard, mouse, headphones... -->
+            <div class="gear-group">
+                <h2 class="eyebrow">Workstation</h2>
+                <div class="gear-list">
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span>
+                        <div><h3>Lenovo laptop</h3><p>My daily machine running Windows 11, for coding, running Spring Boot apps locally and studying.</p></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="gear-group">
+                <h2 class="eyebrow">Development tools</h2>
+                <div class="gear-list">
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3M16 9l4 3-4 3"/></svg></span>
+                        <div><h3>IntelliJ IDEA</h3><p>My main IDE for Java and Spring Boot: smart refactoring, Maven integration and a great debugger.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l3-8 4 16 3-8h2"/></svg></span>
+                        <div><h3>Postman</h3><p>Designing and testing REST APIs before the frontend exists, with saved collections per project.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 8v8M18 10c0 4-6 3-10 6"/></svg></span>
+                        <div><h3>Git &amp; GitHub</h3><p>Version control for every project, branch-per-feature workflow when working in a team.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg></span>
+                        <div><h3>Maven</h3><p>Dependency management and builds for all my Spring Boot projects.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg></span>
+                        <div><h3>MySQL &amp; PostgreSQL</h3><p>MySQL for Sugar Petals, PostgreSQL for my thesis project.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4z"/></svg></span>
+                        <div><h3>AI assistants</h3><p>ChatGPT, Gemini, Claude and DeepSeek for research and debugging. Every generated line gets reviewed before it lands.</p></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="gear-group">
+                <h2 class="eyebrow">Cloud</h2>
+                <div class="gear-list">
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H8a5 5 0 1 1 .9-9.92A6 6 0 0 1 20 11.5a3.75 3.75 0 0 1-2.5 7.5z"/></svg></span>
+                        <div><h3>Amazon Web Services</h3><p>Where I'm learning cloud fundamentals: S3, Lambda and EC2 through labs and my internship project.</p></div>
+                    </article>
+                    <article class="card gear-item reveal">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+                        <div><h3>GitHub Pages</h3><p>Where my AWS internship report lives.</p></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+</body>
+</html>

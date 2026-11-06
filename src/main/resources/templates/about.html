@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{fragments/layout :: assets}"></th:block>
+    <title>About | Phan Tien Thinh</title>
+    <meta name="description" content="About Phan Tien Thinh — fourth-year Software Engineering student focused on Java backend development and AWS.">
+</head>
+<body>
+<header th:replace="~{fragments/layout :: header('about')}"></header>
+
+<main id="main">
+    <section class="page-head">
+        <div class="container">
+            <h1 class="page-title">I'm Phan Tien Thinh. I build <span class="accent">reliable backends</span> in Ho Chi Minh City.</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container about-grid">
+            <div class="prose reveal">
+                <p>I'm a <strong>fourth-year Software Engineering student at Van Lang University</strong> (GPA 3.15/4.0), specializing in backend development with <strong>Java, Spring Boot and relational databases</strong>. I enjoy designing RESTful APIs, modeling data, and turning a rough idea into a full-stack web application that actually works.</p>
+                <p>My journey started with plain <strong>Servlet, JSP and JDBC</strong>, writing everything by hand to understand how the web works underneath a framework. That foundation made Spring Boot click: today I work with Spring Security (JWT, role-based access), Spring Data JPA, Spring AOP and scheduled jobs, on both MySQL and PostgreSQL.</p>
+                <p>In 2026 I joined the <strong>AWS Workforce Bootcamp – First Cloud AI Journey</strong> at Amazon Web Services Vietnam. Over 12 weeks I learned cloud fundamentals through guided labs, built a small serverless goods quality monitoring system, and wrote technical blog posts for the AWS Study Group FCJ community. I'm still early in my cloud journey, and Java backend remains my main strength.</p>
+                <p>Right now I'm building my graduation thesis, a <strong>programming learning platform with AI feedback</strong>, and looking for a <strong>Backend Developer internship</strong> where I can work on real-world systems and grow in API design and system architecture.</p>
+                <p>When I'm not coding, you'll find me swimming, reading comics, or playing Valorant. Before tech took over my schedule, I spent a year as a barista at Highlands Coffee, which taught me a lot about teamwork under pressure.</p>
+                <div class="hero-actions">
+                    <div th:replace="~{fragments/layout :: socials}"></div>
+                    <a class="btn btn-primary" th:href="@{/User/files/Phan-Tien-Thinh-CV.pdf}" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+
+            <aside class="about-side">
+                <div class="about-photo reveal">
+                    <img th:src="@{/User/image/delta.png}" alt="Phan Tien Thinh travelling in Bangkok">
+                </div>
+                <div class="card side-card reveal" style="padding-bottom:16px">
+                    <h2 class="side-card-title">Quick facts</h2>
+                    <ul class="fact-list">
+                        <li><span>Based in</span><span>Ho Chi Minh City</span></li>
+                        <li><span>Focus</span><span>Java backend</span></li>
+                        <li><span>Learning</span><span>AWS cloud basics</span></li>
+                        <li><span>University</span><span>Van Lang (2023–2027)</span></li>
+                        <li><span>English</span><span>VSTEP B2</span></li>
+                        <li><span>Email</span><span><a href="mailto:phantienthinh0909@gmail.com" class="text-link">Say hello</a></span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="eyebrow">Experience</h2>
+            <ul class="card list-card reveal">
+                <li>
+                    <div><div class="title">Cloud Intern – Workforce Bootcamp, First Cloud AI Journey</div><div class="sub">Amazon Web Services Vietnam Company Limited</div></div>
+                    <span class="when">05/2026 — 08/2026</span>
+                    <ul class="bullets">
+                        <li>Completed a 12-week AWS Cloud internship covering cloud fundamentals through guided, hands-on labs.</li>
+                        <li>Built the “Automated Goods Quality Monitoring” internship project on a serverless architecture (Lambda, S3, DynamoDB).</li>
+                        <li>Wrote 3 technical blog posts about AWS for the AWS Study Group FCJ community. <a class="text-link" href="https://chickenptt.github.io/Intership_Report-AWS-FCAJ/" target="_blank" rel="noopener">Read the internship report</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div><div class="title">Barista</div><div class="sub">Highlands Coffee</div></div>
+                    <span class="when">04/2024 — 05/2025</span>
+                    <ul class="bullets">
+                        <li>Prepared drinks following standard procedures, keeping quality and service speed consistent.</li>
+                        <li>Worked in a team of 3–4 serving 200+ customers per peak hour, staying efficient under pressure.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="eyebrow">Education &amp; awards</h2>
+            <ul class="card list-card reveal">
+                <li>
+                    <div><div class="title">B.Sc. Information Technology</div><div class="sub">Van Lang University · Fourth-year student · GPA 3.15/4.0</div></div>
+                    <span class="when">2023 — 2027</span>
+                </li>
+                <li>
+                    <div><div class="title">Top 10% Academic Achievement Scholarship</div><div class="sub">Van Lang University</div></div>
+                    <span class="when">2024 — 2025</span>
+                </li>
+                <li>
+                    <div><div class="title">Data Structures &amp; Backend with Java</div><div class="sub">Certificate</div></div>
+                    <span class="when">03/2026</span>
+                </li>
+                <li>
+                    <div><div class="title">English VSTEP – B2</div><div class="sub">Certificate</div></div>
+                    <span class="when">12/2025</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+</body>
+</html>

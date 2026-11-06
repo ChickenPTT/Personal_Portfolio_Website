@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{fragments/layout :: assets}"></th:block>
+    <title>Project | Phan Tien Thinh</title>
+    <meta name="description" content="Project details by Phan Tien Thinh.">
+</head>
+<body>
+<header th:replace="~{fragments/layout :: header('projects')}"></header>
+
+<main id="main">
+    <div id="project-detail-content">
+        <section class="page-head"><div class="container"><p class="page-lead">Loading project…</p></div></section>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+<script th:src="@{/User/Js/projects-data.js(v=3)}"></script>
+<script th:src="@{/User/Js/project-detail.js(v=3)}"></script>
+</body>
+</html>

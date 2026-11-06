@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{fragments/layout :: assets}"></th:block>
+    <title>Projects | Phan Tien Thinh</title>
+    <meta name="description" content="Selected backend and cloud projects by Phan Tien Thinh.">
+</head>
+<body>
+<header th:replace="~{fragments/layout :: header('projects')}"></header>
+
+<main id="main">
+    <section class="page-head">
+        <div class="container">
+            <h1 class="page-title">Things I've built, from <span class="accent">APIs to the cloud</span>.</h1>
+            <p class="page-lead">Three projects that show how I work: a full-stack learning platform with AI feedback, an e-commerce system built with a team, and a serverless pipeline on AWS.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="project-list" id="project-list"><!-- rendered by projects-list.js --></div>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+<script th:src="@{/User/Js/projects-data.js(v=3)}"></script>
+<script th:src="@{/User/Js/projects-list.js(v=3)}"></script>
+</body>
+</html>
