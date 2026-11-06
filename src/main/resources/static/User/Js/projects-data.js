@@ -1,159 +1,146 @@
+/*
+ * Project data — single source for Home, Projects and Project Detail.
+ * Only `projectsData` is shown on the site (the 3 main projects, in display order).
+ * `thumbnail: null` renders a styled placeholder cover until a screenshot is added.
+ */
 const projectsData = [
     {
-        id: "portfolio-website",
-        name: "Full-Stack Developer Portfolio Website [Updating]",
-        shortDesc: "A modern, responsive portfolio website built with Java, HTML, CSS, and JavaScript to showcase my skills and projects.",
-        thumbnail: "User/image/p3.png",
-        role: "FullStack Developer",
-        type: "Personal Project",
-        year: "5/4/2026 - 20/4/2026",
-        featured: true,
-        githubUrl: "https://github.com/ChickenPTT/Personal_Portfolio_Website",
-        demoUrl: null,
-        techStack: ["Java", "Spring Boot", "Thymeleaf", "HTML", "CSS", "JavaScript"],
-        overview: "Write a short paragraph about the problem this project solves and your goal for it.",
+        id: "ai-learn-code",
+        name: "Programming Learning Website with AI Support",
+        shortDesc: "A platform for practicing programming through coding exercises, flashcards and quizzes, with automated AI feedback on every submission.",
+        thumbnail: null,
+        coverGlyph: "</> AI",
+        role: "Backend Developer",
+        type: "Graduation Thesis",
+        year: "09/2026 – Present",
+        status: "In progress",
+        githubUrl: "https://github.com/ChickenPTT/KLTN_2026_WebsiteLearnCode_AI",
+        links: [],
+        techStack: {
+            "Backend": ["Java 26", "Spring Boot 4.1", "Spring Security (JWT + Refresh Token)", "Spring Data JPA", "Spring AOP"],
+            "Frontend": ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Monaco Editor"],
+            "Database": ["PostgreSQL"],
+            "External services": ["Google Gemini API", "Groq API (fallback)", "Judge0 sandbox"]
+        },
+        overview: "A web platform that helps learners practice programming through coding exercises, flashcards and quizzes, with automated AI feedback. It integrates Judge0 for online code execution, and Google Gemini (with Groq as a fallback) to analyse code errors and auto-generate new problems from templates.",
         features: [
-            "Dark / Light theme toggle",
-            "Responsive layout across devices",
-            "Contact form with validation"
+            "Built a complete full-stack architecture from scratch: REST API, SPA frontend and database design",
+            "Multi-layer AI integration (Gemini + Groq fallback) so feedback keeps working when one AI service is unavailable",
+            "Real-time code execution and grading for 2 languages (Java, Python) via the Judge0 sandbox",
+            "Role-Based Access Control with 2 roles (Student / Admin) and endpoint-level authorization using JWT + refresh tokens",
+            "Automated audit logging with Spring AOP that tracks every admin operation",
+            "Admin dashboard with weekly submission statistics, success rates and user management"
         ],
-        challenges: "Describe a technical challenge you faced and how you solved it.",
-        gallery: ["User/image/p3.png"]
+        gallery: []
+    },
+    {
+        id: "sugar-petals",
+        name: "Sugar Petals – Online Cake & Tea Ordering Platform",
+        shortDesc: "An e-commerce platform to browse the menu, apply promo codes and combo deals, and order cakes and teas online for home delivery.",
+        thumbnail: "User/image/Main_page.png",
+        role: "Backend Developer",
+        type: "Team Project",
+        year: "06/2026 – 07/2026",
+        githubUrl: "https://github.com/ChickenPTT/Web_Java_Cake-Tea",
+        links: [],
+        techStack: {
+            "Backend": ["Java 17", "Spring Boot 4.1", "Spring Security (Form Login + RBAC)", "Spring Data JPA", "Spring AOP", "Spring Mail (SMTP)", "Spring Scheduled Tasks"],
+            "Frontend": ["Thymeleaf", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
+            "Database": ["MySQL"],
+            "External services": ["Gmail SMTP"]
+        },
+        overview: "An e-commerce platform that lets customers browse the menu, add products to the cart, apply promo codes and combo deals, and order cakes and teas online for home delivery. The system sends automated birthday emails, supports password reset by email, and gives staff an admin dashboard for order and revenue management.",
+        features: [
+            { type: "heading", text: "Highlights" },
+            "Multi-layer promotion system: category-based campaigns, combo deals, promo codes and an automatic 10% birthday discount",
+            "REST API endpoints for registration, login, cart management, order placement and order tracking",
+            "Relational schema with User, Product, Order, OrderItem, Category, Campaign, Combo and Promotion entities",
+            "Order management with status transitions (Pending → Processing → Preparing → Delivered) and payment status tracking",
+            { type: "heading", text: "My contributions: customer features" },
+            "Menu browsing with search and pagination, product detail pages and a homepage slider",
+            "Session-based shopping cart: add, update quantity, remove and clear items",
+            "Checkout and per-customer order history",
+            "Forgot-password flow with an email reset link"
+        ],
+        gallery: ["User/image/Main_page.png", "User/image/menupage.png", "User/image/AdminSign.png", "User/image/adminpage.png"]
+    },
+    {
+        id: "aws-goods-quality",
+        name: "Automated Goods Quality Monitoring on AWS",
+        shortDesc: "A learning project from the AWS First Cloud AI Journey internship: a small serverless system that inspects product images automatically.",
+        thumbnail: null,
+        coverGlyph: "λ  AWS",
+        role: "Cloud Intern",
+        type: "AWS Internship Project",
+        year: "05/2026 – 08/2026",
+        githubUrl: null,
+        links: [
+            { label: "Internship Report", url: "https://chickenptt.github.io/Intership_Report-AWS-FCAJ/" }
+        ],
+        techStack: {
+            "AWS services": ["AWS Lambda", "Amazon S3", "Amazon DynamoDB", "Amazon SQS", "Amazon Rekognition"]
+        },
+        overview: "The internship project of my 12-week AWS Workforce Bootcamp (First Cloud AI Journey) at Amazon Web Services Vietnam, and my first real step into the cloud. Following a serverless architecture, product images stored in Amazon S3 are processed by AWS Lambda using Amazon Rekognition, and the inspection results are saved to DynamoDB. It taught me the basics of event-driven design; I'm still deepening my AWS skills beyond the internship.",
+        features: [
+            { type: "heading", text: "What the project does" },
+            "Serverless pipeline combining Lambda, S3, SQS, Rekognition and DynamoDB",
+            "Image analysis with Amazon Rekognition to flag goods that fail quality checks",
+            { type: "heading", text: "What I learned" },
+            "Cloud fundamentals across many AWS services through guided labs",
+            "How serverless, event-driven systems fit together",
+            "Wrote 3 technical blog posts about AWS for the AWS Study Group FCJ community"
+        ],
+        gallery: []
+    }
+];
+
+/* Older projects — kept for reference, not displayed. */
+const archivedProjects = [
+    {
+        id: "portfolio-website",
+        name: "Full-Stack Developer Portfolio Website",
+        githubUrl: "https://github.com/ChickenPTT/Personal_Portfolio_Website",
+        techStack: ["Java", "Spring Boot", "Thymeleaf", "HTML", "CSS", "JavaScript"],
+        thumbnail: "User/image/p3.png"
     },
     {
         id: "backend-jakarta-ee",
         name: "Backend Web Application with Java EE (Servlet, JSP, JDBC)",
-        shortDesc: "Web-based user management system built using Java Servlets and JSP following the MVC architecture.",
-        thumbnail: "User/image/P1.png",
-        role: "Back-end Developer",
-        type: "Personal Project",
-        year: "6/2025 - 3/2026",
-        featured: false,
         githubUrl: "https://github.com/ChickenPTT/Backend-Web-Application-with-Jakarta-EE-Servlet-JSP-JDBC-/tree/laptrinhJavaWeb",
-        demoUrl: null,
         techStack: ["Java", "Servlet", "JSP", "JDBC", "MySQL"],
-        overview: "Write a short paragraph about the problem this project solves and your goal for it.",
-        features: [
-            "CRUD operations via DAO pattern",
-            "MVC architecture with Servlet + JSP",
-            "MySQL integration through JDBC"
-        ],
-        challenges: "Describe a technical challenge you faced and how you solved it.",
-        gallery: ["User/image/P1.png"]
+        thumbnail: "User/image/P1.png",
+        overview: "A learning project to master core Java web technologies: Servlets for request handling, JSP for rendering and JDBC for database access, following MVC. Solved connection overhead by introducing a DBCP connection pool."
     },
     {
         id: "toyota-redesign",
-        name: "Leader - Redesign Website Toyota Viet Nam",
-        shortDesc: "A static multi-page website for Toyota Vietnam, built by a team of four from a redesigned Figma layout.",
-        thumbnail: "User/image/p2.png",
-        role: "Front-end Developer",
-        type: "Team Project",
-        year: "7/7/2025 - 24/7/2025",
-        featured: false,
+        name: "Redesign Website Toyota Viet Nam",
         githubUrl: "https://github.com/ChickenPTT/DuAnCk_TKGD",
-        demoUrl: null,
         techStack: ["HTML", "CSS", "JavaScript", "Figma", "Git/GitHub"],
-        overview: "A final course project to redesign the Toyota Vietnam website. We started from a new interface designed in Figma and turned it into working static pages with HTML, CSS and JavaScript. As team leader, I set up the repository structure and a branch-per-member Git workflow, then merged everyone's pages into one connected website.",
-        features: [
-            "Homepage with image slider and slide transitions",
-            "Vehicle filter interface modeled on the Toyota website",
-            "Account pages: login, register and forgot password",
-            "History and search (find) pages",
-            "Newsroom and Parts & Accessories pages",
-            "All pages linked into one consistent site"
-        ],
-        challenges: "Describe a technical challenge you faced and how you solved it.",
-        gallery: ["User/image/p2.png", "User/image/1.jpg" ],
-    },
-    {
-        id: "website-Cake-Tea",
-        name: "Website Tea and Cake",
-        shortDesc: "A full-stack e-commerce website for a cake and tea shop, built with Spring Boot and Thymeleaf, featuring product browsing, cart, ordering, user authentication and an admin dashboard.",
-        thumbnail: "User/image/Main_page.png",
-        role: "Back-end Developer",
-        type: "Team Project",
-        year: "20/6/2026 - 27/7/2026",
-        featured: true,
-        githubUrl: "https://github.com/ChickenPTT/Web_Java_Cake-Tea",
-        demoUrl: null,
-        techStack: [
-            "Java 17", "Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf",
-            "MySQL", "Spring Mail", "Lombok", "Maven",
-            "HTML", "CSS", "JavaScript", "Bootstrap", "Font Awesome"
-        ],
-        overview: "A web application that lets customers browse a cake and tea menu, search for products, manage a shopping cart and place orders online, while giving shop staff an admin area to manage the store. I built it with a team of developers to practice a complete Spring Boot MVC workflow: server-side rendering with Thymeleaf, authentication with Spring Security, and data persistence with JPA and MySQL.",
-        features: [
-            "My Contributions: User Features",
-            "Browse the cake and tea menu with search and pagination",
-            "Product detail pages and a homepage header slider",
-            "Session-based shopping cart: add, update quantity, remove and clear items",
-            "Combo deals and promo codes, including a birthday discount, with live price calculation (subtotal, discount, delivery fee, total)",
-            "Checkout and order history page for each customer",
-            "Forgot-password flow with email reset link",
-            "Contact page and Vietnamese-language interface",
-            "Teammate’s Work: Admin Features",
-            "Separate admin login and protected admin area, routed through Thymeleaf",
-            "Admin dashboard UI built with Bootstrap and Font Awesome",
-            "User registration (with date of birth) and login popup powered by Spring Security",
-            "Order management: view and process customer orders",
-            "Combo management: create and maintain combo deals shown to customers",
-            "Promotion and campaign management behind the customer promo codes",
-            "Product and category management with image upload"
-        ],
-        challenges: "",
-        gallery: ["User/image/Main_page.png", "User/image/menupage.png", "User/image/AdminSign.png","User/image/adminpage.png"]
+        thumbnail: "User/image/p2.png",
+        overview: "Team of four turning a Figma redesign into a multi-page static site; I led the team and set up the branch-per-member Git workflow."
     }
-
 ];
 
-// 2 project show o main page
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('featured-projects-container');
-    if (!container || typeof projectsData === 'undefined') return;
-
-    // Chỉ lấy project có featured: true và tối đa 2 project
-    const featured = projectsData.filter(p => p.featured).slice(0, 2);
-
-    container.innerHTML = featured.map(project => `
-        <div class="project-card">
-            <div class="project-image">
-                <div class="project-tag">${project.type}</div>
-                <img src="${project.thumbnail}" alt="${project.name}">
-            </div>
-            <div class="project-info">
-                <h3 class="project-name">${project.name}</h3>
-                <p class="project-desc">${project.shortDesc}</p>
-
-                <div class="project-meta-label">PROJECT INFO</div>
-
-                <div class="project-meta">
-                    <div class="project-meta-row">
-                        <span class="meta-key">Year</span>
-                        <span class="meta-value">${project.year}</span>
-                    </div>
-                    <div class="project-meta-row">
-                        <span class="meta-key">Role</span>
-                        <span class="meta-value">${project.role}</span>
-                    </div>
-                </div>
-
-                <div class="project-links">
-                    <a href="/project-detail?id=${encodeURIComponent(project.id)}" class="project-link">
-                        VIEW DETAILS
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                    <a href="${project.githubUrl}" class="project-link" target="_blank">
-                        SEE ON GITHUB
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    `).join('');
-});
+/* ---------- Shared render helpers ---------- */
+const ProjectUI = {
+    escape(s) {
+        return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    },
+    allTech(p) {
+        return Array.isArray(p.techStack) ? p.techStack : Object.values(p.techStack).flat();
+    },
+    detailUrl(p) {
+        return `/project-detail?id=${encodeURIComponent(p.id)}`;
+    },
+    cover(p) {
+        if (p.thumbnail) {
+            return `<img src="/${p.thumbnail}" alt="${this.escape(p.name)}" loading="lazy">`;
+        }
+        return `<div class="cover-placeholder"><div><div class="glyph">${this.escape(p.coverGlyph || p.name.charAt(0))}</div><div class="label">${this.escape(p.type)}</div></div></div>`;
+    },
+    tags(p, max) {
+        const list = this.allTech(p);
+        return list.slice(0, max || list.length).map(t => `<span class="tag">${this.escape(t)}</span>`).join('');
+    },
+    arrow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>`
+};

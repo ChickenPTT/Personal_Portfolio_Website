@@ -12,7 +12,6 @@ public class ContactResponse {
         this.message = message;
     }
 
-    // Static factory methods
     public static ContactResponse success(String message) {
         return new ContactResponse(true, message);
     }
@@ -21,7 +20,6 @@ public class ContactResponse {
         return new ContactResponse(false, message);
     }
 
-    // Getters and Setters
     public boolean isSuccess() {
         return success;
     }

@@ -141,6 +141,24 @@
     background-color: var(--accent);
 }
 
+/* Feature sub-heading (e.g. "My Contributions", "Teammate's Work") */
+.detail-features-list li.feature-heading {
+    padding-left: 0;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.detail-features-list li.feature-heading:first-child {
+    margin-top: 0;
+}
+
+.detail-features-list li.feature-heading::before {
+    display: none;
+}
+
 .detail-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

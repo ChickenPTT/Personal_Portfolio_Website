@@ -1,54 +1,47 @@
+/* Renders project cards on the Home page (#home-projects) and the Projects page (#project-list). */
 document.addEventListener('DOMContentLoaded', function () {
-    const grid = document.getElementById('projects-grid');
-    const emptyMsg = document.getElementById('projects-empty');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    if (typeof projectsData === 'undefined') return;
+    const ui = ProjectUI;
 
-    function renderProjects(filter) {
-        grid.innerHTML = '';
+    // Home: one large card + two small cards (same layout as the article cards)
+    const home = document.getElementById('home-projects');
+    if (home) {
+        const [first, ...rest] = projectsData;
+        const small = rest.slice(0, 2).map(p => `
+            <a class="card project-small reveal" href="${ui.detailUrl(p)}">
+                <span class="dot-date">${ui.escape(p.year)}</span>
+                <h3>${ui.escape(p.name)}</h3>
+                <p>${ui.escape(p.shortDesc)}</p>
+                <span class="text-link">View project ${ui.arrow}</span>
+            </a>`).join('');
 
-        const filtered = filter === 'all'
-            ? projectsData
-            : projectsData.filter(p => p.role === filter);
-
-        if (filtered.length === 0) {
-            emptyMsg.style.display = 'block';
-            return;
-        }
-        emptyMsg.style.display = 'none';
-
-        filtered.forEach(project => {
-            const card = document.createElement('a');
-            card.href = `/project-detail?id=${encodeURIComponent(project.id)}`;
-            card.className = 'project-grid-card';
-
-            const techTags = project.techStack
-                .slice(0, 3)
-                .map(t => `<span class="tech-tag">${t}</span>`)
-                .join('');
-
-            card.innerHTML = `
-                <div class="project-grid-image">
-                    <div class="project-tag">${project.type}</div>
-                    <img src="${project.thumbnail}" alt="${project.name}">
-                </div>
-                <div class="project-grid-info">
-                    <span class="project-grid-role">${project.role}</span>
-                    <h3 class="project-grid-name">${project.name}</h3>
-                    <p class="project-grid-desc">${project.shortDesc}</p>
-                    <div class="tech-tags">${techTags}</div>
-                </div>
-            `;
-            grid.appendChild(card);
-        });
+        home.innerHTML = `
+            <a class="card card-glow project-feature reveal" href="${ui.detailUrl(first)}">
+                <span class="dot-date">${ui.escape(first.year)} · ${ui.escape(first.type)}</span>
+                <h3>${ui.escape(first.name)}</h3>
+                <p>${ui.escape(first.overview)}</p>
+                <div class="tags">${ui.tags(first, 6)}</div>
+                <span class="text-link">View project ${ui.arrow}</span>
+            </a>
+            <div class="project-row">${small}</div>`;
+        if (window.observeReveal) window.observeReveal(home);
     }
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderProjects(btn.dataset.role);
-        });
-    });
-
-    renderProjects('all');
+    // Projects page: alternating media / text rows
+    const list = document.getElementById('project-list');
+    if (list) {
+        list.innerHTML = projectsData.map(p => `
+            <a class="card project-item reveal" href="${ui.detailUrl(p)}">
+                <div class="project-media">${ui.cover(p)}</div>
+                <div class="project-body">
+                    <span class="dot-date">${ui.escape(p.year)}${p.status ? ' · ' + ui.escape(p.status) : ''}</span>
+                    <h2>${ui.escape(p.name)}</h2>
+                    <p>${ui.escape(p.shortDesc)}</p>
+                    <div class="project-meta"><span>Role <b>${ui.escape(p.role)}</b></span><span>Type <b>${ui.escape(p.type)}</b></span></div>
+                    <div class="tags">${ui.tags(p, 6)}</div>
+                    <span class="text-link">View details ${ui.arrow}</span>
+                </div>
+            </a>`).join('');
+        if (window.observeReveal) window.observeReveal(list);
+    }
 });
