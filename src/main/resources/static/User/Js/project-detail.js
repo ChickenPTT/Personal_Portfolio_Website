@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const p = projectsData.find(x => x.id === id);
 
     const backLink = `
-        <a href="/projects" class="back-link">
+        <a href="${ui.url('projects')}" class="back-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             All projects
         </a>`;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const gallery = (p.gallery || []).length > 1
         ? `<div class="detail-block reveal">
                <h2 class="eyebrow">Gallery</h2>
-               <div class="gallery">${p.gallery.map(img => `<a href="/${img}" target="_blank" rel="noopener"><img src="/${img}" alt="${ui.escape(p.name)} screenshot" loading="lazy"></a>`).join('')}</div>
+               <div class="gallery">${p.gallery.map(img => `<a href="${ui.url(img)}" target="_blank" rel="noopener"><img src="${ui.url(img)}" alt="${ui.escape(p.name)} screenshot" loading="lazy"></a>`).join('')}</div>
            </div>`
         : '';
 

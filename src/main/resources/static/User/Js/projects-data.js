@@ -123,6 +123,11 @@ const archivedProjects = [
 
 /* ---------- Shared render helpers ---------- */
 const ProjectUI = {
+    // "/" when run with Spring Boot, "/<repo>/" on GitHub Pages
+    base: (document.querySelector('meta[name="app-base"]') || {}).content || '/',
+    url(path) {
+        return this.base.replace(/\/?$/, '/') + path.replace(/^\//, '');
+    },
     escape(s) {
         return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     },
@@ -130,11 +135,11 @@ const ProjectUI = {
         return Array.isArray(p.techStack) ? p.techStack : Object.values(p.techStack).flat();
     },
     detailUrl(p) {
-        return `/project-detail?id=${encodeURIComponent(p.id)}`;
+        return this.url(`project-detail?id=${encodeURIComponent(p.id)}`);
     },
     cover(p) {
         if (p.thumbnail) {
-            return `<img src="/${p.thumbnail}" alt="${this.escape(p.name)}" loading="lazy">`;
+            return `<img src="${this.url(p.thumbnail)}" alt="${this.escape(p.name)}" loading="lazy">`;
         }
         return `<div class="cover-placeholder"><div><div class="glyph">${this.escape(p.coverGlyph || p.name.charAt(0))}</div><div class="label">${this.escape(p.type)}</div></div></div>`;
     },

@@ -6,6 +6,8 @@
 <th:block th:fragment="assets">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Base path of the site ("/" locally, "/<repo>/" on GitHub Pages); read by the JS -->
+    <meta name="app-base" th:content="@{/}">
     <link rel="icon" type="image/png" th:href="@{/User/image/favicon.png}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

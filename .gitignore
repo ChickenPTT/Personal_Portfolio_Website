@@ -34,3 +34,7 @@ build/
 
 ### Node (local tooling) ###
 node_modules/
+
+### Static export (GitHub Pages) ###
+_site/
+export-app.log
